@@ -42,11 +42,6 @@ class Config:
         self.PING_IMG = getenv("PING_IMG", "https://files.catbox.moe/ynwsxi.png")
         self.START_IMG = getenv("START_IMG", "").split()
         self.START_VIDEO = getenv("START_VIDEO", "").split()
-
-        # Telegram cache group: download hua gaana yahan upload hota hai aur
-        # uska file_id MongoDB me save hota hai (same gaana dobara aaye to
-        # API/yt-dlp nahi chalta). Private group ki ID (-100...) daalo.
-        # Bot is group me admin hona chahiye. 0 / khali = cache band.
         self.CASH_ID = int(getenv("CASH_ID", 0))
 
     def check(self):
